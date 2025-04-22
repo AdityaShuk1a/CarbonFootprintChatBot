@@ -10,26 +10,26 @@ const Sidebar = ({ chats, chatNumber, setNewChatNumber, startNewChat }) => {
   if (!isOpen) {
     return (
       <div className="fixed top-4 left-4 z-50">
-        <MenuIcon onClick={toggleSidebar} className="text-white rounded-full" />
+        <MenuIcon onClick={toggleSidebar} className="text-black rounded-full" />
       </div>
     );
   }
 
   return (
-    <div className="h-screen w-fit z-[999] top-0 absolute bg-[#1f1f1f] text-white flex flex-col justify-between ">
+    <div className="h-screen w-fit z-[999] top-0 absolute bg-[#BBD0FF] text-black flex flex-col justify-between ">
       {/* Top Section */}
       <div style={{ padding: "1rem", marginBottom: "1rem" }}>
         <div
-          className="flex justify-between rounded-lg gap-[6vh] items-center bg-[#424242] "
+          className="flex justify-between rounded-lg gap-[6vh] border-2 border-black items-center bg-[#b49bff] "
           style={{
-            marginBottom: "1vh",
+            marginBottom: "-3.0vh",
             padding: "1vh",
           }}
         >
           <h1 className="text-3xl font-bold tracking-wide">Menu</h1>
           <button
             onClick={toggleSidebar}
-            className="text-gray-400 hover:text-white"
+            className="text-black  hover:text-white"
             title="Close"
           >
             <X size={29} />
@@ -38,9 +38,9 @@ const Sidebar = ({ chats, chatNumber, setNewChatNumber, startNewChat }) => {
         
       </div>
       {/* New Chat */}
-      <div className="h-full top-0 bg-[#1f1f1f] "style={{ padding: "2vh" }} >
+      <div className="h-full top-0 bg-[#BBD0FF] border-2 border-black "style={{ padding: "2vh" }} >
         <div
-          className="flex items-center cursor-pointer bg-[#424242] hover:bg-gray-800 rounded-2xl transition-colors mb-4"
+          className="flex items-center cursor-pointer bg-[#b49bff] border-2 border-l-black hover:bg-gray-800 rounded-2xl transition-colors mb-4"
           style={{ padding: "1vh", marginBottom: "1rem" }}
           onClick={startNewChat}
         >
@@ -50,7 +50,7 @@ const Sidebar = ({ chats, chatNumber, setNewChatNumber, startNewChat }) => {
 
         {/* All Chats */}
         <h2
-          className="text-sm uppercase tracking-wide text-gray-400 mb-2"
+          className="text-sm uppercase tracking-wide text-black mb-2"
           style={{ marginTop: "1rem", marginBottom: "1rem" }}
         >
           All Chats
@@ -60,8 +60,8 @@ const Sidebar = ({ chats, chatNumber, setNewChatNumber, startNewChat }) => {
             <div
               key={index}
               className={`cursor-pointer ${
-                index === chatNumber ? "bg-[#6E6E6E]" : "bg-[#424242]"
-              } hover:bg-gray-800 rounded-lg transition-colors text-sm`}
+                index === chatNumber ? "bg-[#bea0d3]" : "bg-[#b49bff]"
+              } hover:bg-gray-800 rounded-lg border-2 border-black transition-colors text-sm`}
               style={{ padding: "0.6rem 0.75rem", marginBottom: "1rem" }}
               onClick={() => setNewChatNumber(chat.id)}
             >

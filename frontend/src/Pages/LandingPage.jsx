@@ -154,10 +154,10 @@ EcoTrackBot: “Hey, green thinker! Want to see how much CO₂ you’ve been kic
   return (
     <>
     <NavBar />
-    <div className="h-screen w-screen bg-black flex">
+    <div className="h-screen w-screen bg-[#FDBDCB] flex">
       
       <SideBar chats={chats} chatNumber={chatNumber} setNewChatNumber={setNewChatNumber} startNewChat={startNewChat}   />
-      <div className="h-full w-full flex justify-center items-center text-white text-3xl">
+      <div className="h-full w-full flex justify-center items-center text-black text-3xl">
         <div
           className="w-full h-full flex items-center justify-center flex-col"
           style={{ padding: "1vh" }}
@@ -173,7 +173,7 @@ EcoTrackBot: “Hey, green thinker! Want to see how much CO₂ you’ve been kic
                   value={userInput}
                   onChange={(e) => setUserInput(e.target.value)}
                   placeholder="Search"
-                  className="w-[60%] h-10 rounded-3xl text-xl text-white border-white border-[0.5px] bg-transparent"
+                  className="w-[60%] h-10 rounded-3xl text-xl text-black border-black border-[0.5px] bg-transparent"
                   style={{
                     padding: "1vh",
                     marginRight: "0.5vh",
@@ -206,7 +206,7 @@ EcoTrackBot: “Hey, green thinker! Want to see how much CO₂ you’ve been kic
                         style={{
                           padding: "2vh",
                           backgroundColor:
-                            msg.person === "user" ? "#333" : "",
+                            msg.person === "user" ? "#B49BFF" : "",
                         }}
                       >
                         {msg.text}
@@ -222,7 +222,7 @@ EcoTrackBot: “Hey, green thinker! Want to see how much CO₂ you’ve been kic
                     placeholder="Type a riddle..."
                     value={userInput}
                     onChange={(e) => setUserInput(e.target.value)}
-                    className="w-[60%] h-10 rounded-3xl text-xl border-white border-[0.5px] bg-transparent text-white"
+                    className="w-[60%] h-10 rounded-3xl text-xl border-black border-[0.5px] bg-transparent text-black"
                     style={{
                       padding: "1vh",
                       marginRight: "0.5vh",
